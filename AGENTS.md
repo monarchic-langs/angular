@@ -32,3 +32,19 @@ This is the source code for the Angular framework. This guide outlines standard 
 ## Pull Requests
 
 - Use the `gh` CLI (GitHub CLI) for creating and managing pull requests.
+
+## Required Internal Skills
+
+When working in this repo, use these skills from the `internal-skills` repo:
+
+- `halt`
+- `tools`
+- `lang`
+- `nix`
+- `test`
+- `docs`
+- `review`
+- `vcs`
+- `cleanup`
+- `debug`
+- `handoff`

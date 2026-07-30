@@ -1,9 +1,7 @@
 name: DevInfra
 
 on:
-  push:
-  pull_request_target:
-    types: [opened, synchronize, reopened, ready_for_review, labeled]
+  workflow_dispatch:
 
 # Declare default permissions as read only.
 permissions:
@@ -11,7 +9,7 @@ permissions:
 
 jobs:
   assistant_to_the_branch_manager:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(vars.CI_RUNNER_LABELS) }}
     if: github.event.repository.fork == false
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

@@ -16,7 +16,7 @@ defaults:
 jobs:
   list:
     timeout-minutes: 3
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(vars.CI_RUNNER_LABELS) }}
     outputs:
       workflows: ${{ steps.workflows.outputs.workflows }}
     steps:
@@ -29,7 +29,7 @@ jobs:
 
   workflow:
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(vars.CI_RUNNER_LABELS) }}
     needs: list
     strategy:
       matrix:

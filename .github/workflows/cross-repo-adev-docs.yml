@@ -5,8 +5,7 @@ on:
     inputs: {}
   push:
     branches:
-      - 'main'
-      - '[0-9]+.[0-9]+.x'
+      - 'monarchic'
 
 # Declare default permissions as read only.
 permissions:

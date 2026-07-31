@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   nix-ci:
-    uses: monarchic-meta/.github/.github/workflows/nix-ci.yml@main
+    uses: monarchic-langs/.github/.github/workflows/nix-ci.yml@main
     with:
       publish_cache: ${{ github.ref == 'refs/heads/monarchic' }}
     secrets:
